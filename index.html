@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>边框生成器</title>
+</head>
+<body>
+    <div id="frames"></div>
+    
+    <!-- 先引入编译后的 JS 文件 -->
+    <script src="create_frames.js"></script>
+    
+    <!-- 使用示例 -->
+    <script>
+        const framesDiv = document.getElementById('frames');
+        
+        // 生成三种不同的边框
+        for (let i = 1; i <= 3; i++) {
+            // 创建图片元素
+            const img = new Image();
+            img.src = createFrame(i);
+            
+            // 创建缩略图
+            const thumb = new Image();
+            thumb.src = createThumbnail(i);
+            
+            // 添加到页面
+            framesDiv.appendChild(img);
+            framesDiv.appendChild(thumb);
+        }
+    </script>
+</body>
+</html> 

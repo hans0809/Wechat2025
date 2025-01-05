@@ -1,0 +1,26 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+/* 全局样式文件 */
+page {
+  background-color: #f8f8f8;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+} 
+
+/* 在这里添加全局样式 */
+page {
+  background-color: #f8f8f8;
+}
+
+.common-button {
+  // 公共按钮样式
+} 

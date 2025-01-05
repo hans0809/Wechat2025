@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarTitleText": "2025新年头像",
+    "navigationBarBackgroundColor": "#FF0000",
+    "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.writePhotosAlbum": {
+      "desc": "保存头像需要使用您的相册权限"
+    }
+  },
+  "useExtendedLib": {
+    "weui": true
+  }
+}

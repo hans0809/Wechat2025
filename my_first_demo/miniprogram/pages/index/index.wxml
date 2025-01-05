@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="container">
+  <canvas 
+    type="2d" 
+    id="avatarCanvas"
+    canvas-id="avatarCanvas" 
+    style="width: 300px; height: 300px; position: fixed; left: -9999px; visibility: hidden;"
+  ></canvas>
+  
+  <view class="avatar-section">
+    <!-- 微信头像选择器 -->
+    <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+      <image class="avatar" src="{{userInfo.avatarUrl}}" mode="aspectFit"/>
+    </button>
+    
+    <!-- 预览区域 -->
+    <view wx:if="{{previewImage}}" class="preview-box">
+      <image src="{{previewImage}}" mode="aspectFit" class="preview"/>
+    </view>
+  </view>
+
+  <view class="button-group">
+    <button wx:if="{{userInfo.avatarUrl}}" class="btn" type="primary" bindtap="generateAvatar">生成新年头像</button>
+    <button wx:if="{{previewImage}}" class="btn" type="primary" bindtap="saveImage">保存头像</button>
+  </view>
+
+  <!-- 样式选择区域 -->
+  <scroll-view class="style-list" scroll-x>
+    <view class="style-item {{currentStyle === item.id ? 'active' : ''}}" 
+          wx:for="{{styleList}}" 
+          wx:key="id" 
+          bindtap="selectStyle" 
+          data-id="{{item.id}}">
+      <image src="{{item.thumb}}" mode="aspectFit"/>
+    </view>
+  </scroll-view>
+</view>

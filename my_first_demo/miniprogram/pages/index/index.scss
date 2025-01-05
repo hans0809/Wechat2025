@@ -1,0 +1,143 @@
+/**index.scss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+  width: 80%;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.avatar-wrapper {
+  width: 300rpx !important;
+  height: 300rpx !important;
+  padding: 0;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin: 20rpx 0;
+  border: 2rpx solid #eee;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+}
+
+.nickname-wrapper {
+  display: flex;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  border-top: .5px solid rgba(0, 0, 0, 0.1);
+  border-bottom: .5px solid rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.nickname-label {
+  width: 105px;
+}
+
+.nickname-input {
+  flex: 1;
+}
+
+.container {
+  padding: 20rpx;
+}
+
+.avatar-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30rpx 0;
+}
+
+.avatar-box, .preview-box {
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 20rpx;
+  margin: 20rpx 0;
+  overflow: hidden;
+  border: 2rpx solid #eee;
+}
+
+.avatar, .preview {
+  width: 100%;
+  height: 100%;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  color: #999;
+}
+
+.button-group {
+  width: 100%;
+  padding: 20rpx;
+  
+  .btn {
+    margin: 20rpx 0;
+  }
+}
+
+.style-list {
+  width: 100%;
+  white-space: nowrap;
+  padding: 20rpx;
+  
+  .style-item {
+    display: inline-block;
+    width: 150rpx;
+    height: 150rpx;
+    margin: 0 10rpx;
+    border: 2rpx solid #eee;
+    border-radius: 10rpx;
+    overflow: hidden;
+    position: relative;
+    
+    &.active {
+      border-color: #ff0000;
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border: 15rpx solid #ff0000;
+        border-left-color: transparent;
+        border-top-color: transparent;
+      }
+    }
+    
+    image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
